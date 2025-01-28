@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    cursor: none; /* Hide the default cursor */
+    position: relative;
+    background-color: #f6f2eb; /* Set the background color */
+}
+
+img {
+    width: 100vw; /* Background image takes full width */
+    height: 100vh; /* Background image takes full height */
+    object-fit: cover; /* Ensure background image fills the viewport */
+}
+
+/* Exclude cursor image from the background color */
+#custom-cursor img {
+    background-color: transparent; /* Ensure transparent background */
+}
+
+#small-image {
+    position: absolute;  /* Position the new image absolutely */
+    bottom: 0px;         /* 20px from the bottom of the screen */
+    right: 20px;          /* 20px from the right side */
+    width: 200px;         /* Resize the new image */
+    height: auto;         /* Maintain aspect ratio */
+    z-index: 10;          /* Ensure it's on top of the background image */
+}
+
+/* Define the shake (glitch) animation */
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px); /* Move up */
+    }
+    40% {
+        transform: translateY(10px);  /* Move down */
+    }
+    60% {
+        transform: translateY(-10px); /* Move up */
+    }
+    80% {
+        transform: translateY(10px);  /* Move down */
+    }
+    100% {
+        transform: translateY(0);     /* Reset to original position */
+    }
+}
+
+/* Apply the animation to the image */
+#small-image {
+    animation: shake 0.5s ease-in-out infinite; /* Shake every 0.5 seconds, infinitely */
+}
+
+#custom-cursor {
+    position: absolute;
+    pointer-events: none; /* Allows clicking through the custom cursor */
+    z-index: 9999; /* Ensures it stays on top of other content */
+}
+
+#custom-cursor img {
+    width: 600px; /* Adjust the size of the cursor image */
+    height: auto;
+    user-select: none; /* Prevents the cursor image from being selected */
+    background-color: transparent; /* Make sure the cursor remains transparent */
+}

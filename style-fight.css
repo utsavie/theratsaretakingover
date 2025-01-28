@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('Winner.gif') no-repeat fixed;
+    background-size: cover;
+    background-position: calc(50% + 50px) center; /* Move 50px to the right */
+    /* Add a colour overlay (fallback if GIF doesn't load) */
+    background-color: #d0a3bb; /* Your chosen background colour */
+  }
+  
+  .draggable {
+    position: absolute;
+    width: 5000px; /* Larger image size */
+    height: auto; /* Maintain aspect ratio */
+    cursor: grab;
+    transition: box-shadow 0.2s ease; /* Smooth glow animation */
+}
+.glow {
+  filter: drop-shadow(0 0 30px #eccb51) drop-shadow(0 0 15px #eccb51) drop-shadow(0 0 10px #eccb51);
+}

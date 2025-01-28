@@ -1,0 +1,68 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end; /* Align the grid to the right */
+        align-items: center;       /* Center the grid vertically */
+        background-color: #f6f2eb; /* Ensure the background color */
+        padding-right: 42px;       /* Add some space from the right edge */
+        background: #f6f2eb url('gridgirltext7.gif') no-repeat center center fixed; 
+        background-size: cover;    /* Scales the GIF to cover the entire screen */
+        overflow: hidden;          /* Prevents scrolling */
+    }
+    
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* 4 columns */
+    grid-template-rows: repeat(3, 200px);    /* 3 rows */
+    grid-gap: 20px;                          /* Gaps between squares */
+    position: relative;
+    right: -10px;
+}
+
+/* Grid items */
+.grid-item {
+    width: 200px;
+    height: 200px;
+    background-color: transparent; /* Pink background for the squares */
+    position: relative;
+    overflow: hidden; /* Ensures no overflow when hovering images are larger */
+    border: 2px solid #e4a3b4;
+}
+
+/* Hover effect for grid squares */
+.grid-item:hover {
+    background-color: transparent; /* Makes the square transparent on hover */
+    border: transparent;
+}
+
+/* Hover image */
+#hover-image {
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 10;
+}
+
+#hover-image img {
+    user-select: none;
+}
+
+/* Centering the images inside the grid squares */
+.grid-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center image */
+    width: auto;
+    height: auto;
+}
+

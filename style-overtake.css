@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: see Vertical Centering */
+    min-height: 100vh;   /* Ensures the body takes full height of the viewport */
+    margin: 0;           /* Removes default body margin */
+    background: #323d64 url('similartext3.gif') no-repeat center center fixed; 
+    background-size: 95%;    /* Scales the GIF to cover the entire screen */
+    overflow: hidden;    
+}
+img {
+    width: 1100px;
+    height: auto;
+    position: relative; /* Ensure it can be moved */
+    top: 5px;
+    right: 10px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Hover Image</title>
+    <link rel="stylesheet" href="style-gridgirl.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- 12 grid items for the 4x3 grid -->
+        <div class="grid-item" data-image="ratface.png" data-image-width="500px" data-image-height="500px"></div>
+        <div class="grid-item" data-image="x.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="rattail.png" data-image-width="300px" data-image-height="300px"></div>
+        <div class="grid-item" data-image="knot.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="x.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="knot.png" data-image-width="250px" data-image-height="250px"></div>
+        <!-- 7th square with a link -->
+        <a href="overtake.html" class="grid-link">
+            <div class="grid-item" data-image="gridgirlthegirl.png" data-image-width="750px" data-image-height="750px"></div>
+        </a>
+        <div class="grid-item" data-image="knot.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="x.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="rathands.png" data-image-width="240px" data-image-height="240px"></div>
+        <div class="grid-item" data-image="x.png" data-image-width="250px" data-image-height="250px"></div>
+        <div class="grid-item" data-image="ratside.png" data-image-width="420px" data-image-height="420px"></div>
+    </div>
+
+    <div id="hover-image" class="hidden">
+        <img id="hover-image-img" src="" alt="Hovered Image">
+    </div>
+
+    <script src="script-gridgirl.js"></script>
+    
+</body>
+</html>

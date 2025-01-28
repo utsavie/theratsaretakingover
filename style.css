@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: see Vertical Centering */
+    border-top: -20px;
+    min-height: 100vh;   /* Ensures the body takes full height of the viewport */
+    margin: 0;           /* Removes default body margin */
+background-color: #e4a3b4;
+}
+img {
+    width: 1250px;
+    height: auto;
+}
